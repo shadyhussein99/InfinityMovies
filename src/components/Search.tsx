@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux";
+import { resultMovie } from "../redux/searchSlice";
 
 function Search() {
 
+    const dispatch = useDispatch()
+    const movie = useSelector((state: any) => state.search.value)
     interface SearchedMovie {
         name: string;
         year: string;
@@ -17,12 +21,10 @@ function Search() {
         year: ""
     })
 
-    const [resultMovie, setResultMovie] = useState<any>("")        // The Movie returned from API
-
     useEffect(() => {
         fetch(`https://www.omdbapi.com/?apikey=ecd7e7dc&t=${selectedMovie.name}&y=${selectedMovie.year}&plot=full`)
             .then(res => res.json())
-            .then(res => setResultMovie(res))
+            .then(res => dispatch(resultMovie(res)))
             .catch(err => console.log(err))
     }, [selectedMovie.name, selectedMovie.year])
 
