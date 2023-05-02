@@ -15,6 +15,15 @@ function MovieDetails() {
             </div>
             <h1>{movie?.Title}</h1>
             <p>{movie?.Genre}</p>
+            <p>{movie?.Plot}</p>
+            <hr />
+            <p>Main Actors <span>{movie?.Actors}</span></p>
+            <hr />
+            <p>Director <span>{movie?.Director}</span></p>
+            <hr />
+            <p>Writer <span>{movie?.Writer}</span></p>
+            <hr />
+            <p>Country <span>{movie?.Country}</span></p>
         </main>
     );
 }
