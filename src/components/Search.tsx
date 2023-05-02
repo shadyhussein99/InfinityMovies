@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { resultMovie } from "../redux/searchSlice";
+import { Link } from "react-router-dom";
 
 function Search() {
 
     const dispatch = useDispatch()
-    const movie = useSelector((state: any) => state.search.value)
+
     interface SearchedMovie {
         name: string;
         year: string;
@@ -46,7 +47,7 @@ function Search() {
         <label>Year (optional)</label>
         <input type="text" name="year" value={searchingMovie.year} onChange={handleChange} />
 
-        <button onClick={handleClick}>SEARCH</button>
+        <Link to="/movieDetails"><button onClick={handleClick}>SEARCH</button></Link>
 
     </section>
 }
