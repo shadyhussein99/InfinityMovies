@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react"
 import { useDispatch } from "react-redux";
 import { resultMovie } from "../redux/searchSlice";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Search() {
 
+    const navigate = useNavigate()
     const dispatch = useDispatch()
 
     interface SearchedMovie {
@@ -26,6 +27,7 @@ function Search() {
         fetch(`https://www.omdbapi.com/?apikey=ecd7e7dc&t=${selectedMovie.name}&y=${selectedMovie.year}&plot=full`)
             .then(res => res.json())
             .then(res => dispatch(resultMovie(res)))
+            .then(() => selectedMovie.name && navigate("/movieDetails"))   // To navigate to the Movie Details page only when the state is updated
             .catch(err => console.log(err))
     }, [selectedMovie.name, selectedMovie.year])
 
@@ -47,7 +49,7 @@ function Search() {
         <label>Year (optional)</label>
         <input type="text" name="year" value={searchingMovie.year} onChange={handleChange} />
 
-        <Link to="/movieDetails"><button onClick={handleClick}>SEARCH</button></Link>
+        <button onClick={handleClick}>SEARCH</button>
 
     </section>
 }
