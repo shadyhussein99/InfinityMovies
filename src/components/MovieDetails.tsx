@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 function MovieDetails() {
+
     const movie = useSelector((state: any) => state.search.value);
     const [rottenTomatoesRating, setRottenTomatoesRating] = useState<any>("")
     
@@ -22,11 +23,14 @@ function MovieDetails() {
                 <span>Rotten Tomatoes {rottenTomatoesRating}</span>
                 <span>({movie?.imdbVotes} reviews)</span>
             </div>
+
             <h1>{movie?.Title}</h1>
+
             <div>
                 <span>{movie?.Genre}</span>
                 <span>{movie?.Runtime}</span>
             </div>
+
             <p>{movie?.Plot}</p>
             <hr />
             <p>Main Actors <span>{movie?.Actors}</span></p>
@@ -43,7 +47,7 @@ function MovieDetails() {
             <hr />
             <p>Awards <span>{movie?.Awards}</span></p>
         </main> :
-        <h1>No matching Movie or Series!</h1>
+       <h1>No matching Movie or Series!</h1>
     );
 }
 
