@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-
 function ChildrenMovies() {
 
     const [childrenMovies, setChildrenMovies] = useState<string[]>([])          // State that holds the response
