@@ -13,7 +13,7 @@ function MovieCard(props: any) {
             scrollbar={{ draggable: true }}
         >
             {props.movies.map((value: any) => {
-                return <SwiperSlide>
+                return <SwiperSlide key={value.id}>
                     <img src={`https://image.tmdb.org/t/p/w300/${value?.poster_path}`} alt="movie-img" />
                     <h3>{value?.title || value?.name}</h3>
                 </SwiperSlide>
