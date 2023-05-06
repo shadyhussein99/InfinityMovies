@@ -24,7 +24,7 @@ function Search() {
     })
 
     useEffect(() => {
-        fetch(`https://www.omdbapi.com/?apikey=ecd7e7dc&t=${selectedMovie.name}&y=${selectedMovie.year}&plot=full`)
+        fetch(`https://www.omdbapi.com/?apikey=${import.meta.env.VITE_REACT_API_KEY_OMDB}&t=${selectedMovie.name}&y=${selectedMovie.year}&plot=full`)
             .then(res => res.json())
             .then(res => dispatch(resultMovie(res)))
             .then(() => selectedMovie.name && navigate("/movieDetails"))   // To navigate to the Movie Details page only when the state is updated
