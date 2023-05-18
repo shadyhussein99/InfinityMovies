@@ -12,7 +12,7 @@ function MaxEarningsMovies() {
             .catch(err => console.log(err))
     }, [])
 
-    return <section id="max-earnings-movies">
+    return <section>
         <h2>Max Earnings</h2>
 
         <MovieCard

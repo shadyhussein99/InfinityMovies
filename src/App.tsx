@@ -4,14 +4,13 @@ import NewestMovies from "./components/NewestMovies"
 import PopularMovies from "./components/PopularMovies"
 import MaxEarningsMovies from "./components/MaxEarningsMovies"
 import ChildrenMovies from "./components/ChildrenMovies"
-import SideBar from "./components/SideBar"
+
 function App() {
 
   return (
     <>
       <ImageSlider />
       <Search />
-      <SideBar />
       <NewestMovies />
       <PopularMovies />
       <MaxEarningsMovies />
