@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react"
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { resultMovie } from "../redux/searchSlice";
+import { searchMovie } from "../redux/selectSlice";
 import { useNavigate } from "react-router-dom";
 
 function Search() {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
+
+    const selectedMovie = useSelector((state: any) => state.select.value);
 
     interface SearchedMovie {
         name: string;
@@ -18,16 +21,11 @@ function Search() {
         year: ""
     })
 
-    const [selectedMovie, setSelectedMovie] = useState<SearchedMovie>({     // Movie's name and year on clicking the search button
-        name: "",
-        year: ""
-    })
-
     useEffect(() => {
         fetch(`https://www.omdbapi.com/?apikey=${import.meta.env.VITE_REACT_API_KEY_OMDB}&t=${selectedMovie.name}&y=${selectedMovie.year}&plot=full`)
             .then(res => res.json())
-            .then(res => dispatch(resultMovie(res)))
-            .then(() => selectedMovie.name && navigate("/movieDetails"))   // To navigate to the Movie Details page only when the state is updated
+            .then(res => {dispatch(resultMovie(res))})
+            .then(() => selectedMovie.name && navigate("/movieDetails"))   // To navigate to the Movie Details page after the state is updated
             .catch(err => console.log(err))
     }, [selectedMovie.name, selectedMovie.year])
 
@@ -37,7 +35,10 @@ function Search() {
     }
 
     const handleClick = () => {
-        setSelectedMovie({ ...selectedMovie, name: searchingMovie.name, year: searchingMovie.year })
+        dispatch(searchMovie({
+            name: searchingMovie.name,
+            year: searchingMovie.year,
+        }))
     }
 
     return <section>

@@ -6,7 +6,7 @@ function MovieCard(props: any) {
     return <section>
         <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={50}
+            spaceBetween={40}
             slidesPerView={4}
             navigation
             pagination={{ clickable: true }}
@@ -18,7 +18,6 @@ function MovieCard(props: any) {
                     <h3>{value?.title || value?.name}</h3>
                 </SwiperSlide>
             })}
-
         </Swiper>
     </section>
 }

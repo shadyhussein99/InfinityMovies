@@ -1,3 +1,5 @@
+// Slice of the response used in the Movie Details page
+
 import { createSlice } from '@reduxjs/toolkit'
 
 export const searchSlice = createSlice({
