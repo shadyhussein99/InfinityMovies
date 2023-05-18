@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import { useSelector, useDispatch  } from "react-redux";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { searchMovie } from "../redux/selectSlice";
+import { searchMovie } from "../../redux/selectSlice";
 
 function MovieDetails() {
 
@@ -9,14 +9,8 @@ function MovieDetails() {
     const dispatch = useDispatch()
 
     const movie = useSelector((state: any) => state.search.value);
-    const [rottenTomatoesRating, setRottenTomatoesRating] = useState<any>("")
 
     useEffect(() => {
-        if (movie.Response === "True") {              // To avoid errors if the user searched for an invalid movie
-            const [, rottenTomatoes] = movie.Ratings;
-            setRottenTomatoesRating(rottenTomatoes.Value)
-        }
-
         dispatch(searchMovie({   // To clear the user's selection after navigating to the Movie details page with the required movie
             name: "",
             year: "",
@@ -31,7 +25,6 @@ function MovieDetails() {
 
             <div>
                 <span>IMDB {movie?.imdbRating}/10</span>
-                <span>Rotten Tomatoes {rottenTomatoesRating}</span>
                 <span>({movie?.imdbVotes} reviews)</span>
             </div>
 

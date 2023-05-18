@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+}
+
+aside {
+  background-color: #b02e2f;
+  position: fixed;
+  top: 0;
+  min-height: 100vh;
+  z-index: 2;
+  width: 20%;
+}
+aside a {
+  display: block;
+  margin-top: 40%;
+  text-align: center;
+}
+
+header .image-div {
+  display: flex;
+  justify-content: end;
+}
+header .image-div img {
+  display: inline-block;
+  width: 80%;
+  height: 500px;
+}
+header .title {
+  position: absolute;
+  top: 0;
+  left: 25%;
+}
+header .description-div {
+  position: absolute;
+  top: 300px;
+  left: 25%;
+}
+
+.search-section {
+  position: absolute;
+  top: 21px;
+  left: 40%;
+}
+.search-section .search-div {
+  display: inline-block;
+}
+.search-section .search-div label {
+  display: block;
+}
+.search-section button {
+  display: block;
+}
+
+.newest-movies-section {
+  width: 80%;
+  margin-left: auto;
+}
+
+@media (max-width: 900px) {
+  aside {
+    background-color: red;
+    position: initial;
+    min-height: initial;
+    width: initial;
+  }
+  aside p {
+    margin-top: initial;
+  }
+  header div {
+    display: initial;
+  }
+  header div img {
+    display: initial;
+    width: initial;
+    height: 500px;
+  }
+}/*# sourceMappingURL=main.css.map */

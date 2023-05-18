@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import MovieDetails from './components/MovieDetails.tsx';
+import MovieDetails from './components/pages/MovieDetails.tsx';
 import store from "./redux/store"
 import { Provider } from 'react-redux'
 

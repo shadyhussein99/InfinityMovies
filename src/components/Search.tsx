@@ -24,7 +24,7 @@ function Search() {
     useEffect(() => {
         fetch(`https://www.omdbapi.com/?apikey=${import.meta.env.VITE_REACT_API_KEY_OMDB}&t=${selectedMovie.name}&y=${selectedMovie.year}&plot=full`)
             .then(res => res.json())
-            .then(res => {dispatch(resultMovie(res))})
+            .then(res => { dispatch(resultMovie(res)) })
             .then(() => selectedMovie.name && navigate("/movieDetails"))   // To navigate to the Movie Details page after the state is updated
             .catch(err => console.log(err))
     }, [selectedMovie.name, selectedMovie.year])
@@ -41,14 +41,17 @@ function Search() {
         }))
     }
 
-    return <section>
-        <h1>MovieHive</h1>
+    return <section className="search-section">
 
-        <label>Title</label>
-        <input type="text" name="name" value={searchingMovie.name} placeholder="Search" onChange={handleChange} />
+        <div className="search-div">
+            <label>Title</label>
+            <input type="text" name="name" value={searchingMovie.name} placeholder="Search" onChange={handleChange} />
+        </div>
 
-        <label>Year (optional)</label>
-        <input type="text" name="year" value={searchingMovie.year} onChange={handleChange} />
+        <div className="search-div">
+            <label>Year (optional)</label>
+            <input type="text" name="year" value={searchingMovie.year} onChange={handleChange} />
+        </div>
 
         <button onClick={handleClick}>SEARCH</button>
 

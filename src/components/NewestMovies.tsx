@@ -12,12 +12,15 @@ function NewestMovies() {
             .catch(err => console.log(err))
     }, [])
 
-    return <section>
-        <h2>What's New</h2>
+    return <section className="newest-movies-section" id="newest-movies">
 
-        <MovieCard
-            movies={newestMovies}
-        />
+        <div>
+            <h2>What's New</h2>
+
+            <MovieCard
+                movies={newestMovies}
+            />
+        </div>
     </section>
 }
 

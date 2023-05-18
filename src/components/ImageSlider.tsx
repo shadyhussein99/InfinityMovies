@@ -18,9 +18,17 @@ function ImageSlider() {
     }, [])
 
     return <header>
-        <img src={`/pics/${sliderImage}`} alt="slider-img" />
-        <h1>Unlimited movies, series and more</h1>
-        <p>Find the latest news and information about movies and series on MovieHovie</p>
+
+        <div className="image-div">
+            <img src={`/pics/${sliderImage}`} alt="slider-img" />
+        </div>
+
+        <h1 className="title">MovieHive</h1>
+
+        <div className="description-div">
+            <h1>Unlimited movies, series and more</h1>
+            <p>Find the latest news and information about movies and series on MovieHovie</p>
+        </div>
     </header>
 }
 

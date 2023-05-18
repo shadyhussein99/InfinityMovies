@@ -1,18 +1,19 @@
 import Search from "./components/Search"
 import ImageSlider from "./components/ImageSlider"
 import NewestMovies from "./components/NewestMovies"
-import TrendingMovies from "./components/TrendingMovies"
+import PopularMovies from "./components/PopularMovies"
 import MaxEarningsMovies from "./components/MaxEarningsMovies"
 import ChildrenMovies from "./components/ChildrenMovies"
-
+import SideBar from "./components/SideBar"
 function App() {
 
   return (
     <>
-      <Search />
       <ImageSlider />
+      <Search />
+      <SideBar />
       <NewestMovies />
-      <TrendingMovies />
+      <PopularMovies />
       <MaxEarningsMovies />
       <ChildrenMovies />
     </>

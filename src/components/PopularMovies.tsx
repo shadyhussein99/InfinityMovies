@@ -1,24 +1,24 @@
 import { useState, useEffect } from "react"
 import MovieCard from "./MovieCard"
 
-function TrendingMovies() {
+function PopularMovies() {
 
-    const [trendingMovies, setTrendingMovies] = useState<string[]>([])
+    const [popularMovies, setPopularMovies] = useState<string[]>([])
 
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${import.meta.env.VITE_REACT_API_KEY_IMDB}`)
             .then(res => res.json())
-            .then(res => { setTrendingMovies(res.results) })
+            .then(res => { setPopularMovies(res.results) })
             .catch(err => console.log(err))
     }, [])
 
-    return <section>
+    return <section id="popular-movies">
         <h2>Most Popular</h2>
 
         <MovieCard
-            movies={trendingMovies}
+            movies={popularMovies}
         />
     </section>
 }
 
-export default TrendingMovies
+export default PopularMovies
