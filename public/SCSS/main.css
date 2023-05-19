@@ -1,3 +1,21 @@
 body {
   margin: 0;
+}
+
+aside {
+  background-color: #b02e2f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18%;
+  min-height: 100vh;
+  z-index: 2;
+}
+aside a {
+  display: block;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-top: 45%;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
