@@ -12,7 +12,7 @@ function PopularMovies() {
             .catch(err => console.log(err))
     }, [])
 
-    return <section>
+    return <section id="popular-movies">
         <h2>Most Popular</h2>
 
         <MovieCard

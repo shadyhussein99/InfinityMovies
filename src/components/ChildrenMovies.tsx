@@ -20,7 +20,7 @@ function ChildrenMovies() {
     }, [displayedMovies, childrenMovies])
 
 
-    return <section>
+    return <section id="children-movies">
         <h2>Children Movies</h2>
 
         {displayedMovies.map((value: any) => {
