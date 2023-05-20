@@ -20,7 +20,7 @@ function ImageSlider() {
     return <header>
 
         <div className="image-div">
-            <img src={`/pics/${sliderImage}`} alt="slider-img" />
+            <img src={`/pics/image-slider/${sliderImage}`} alt="slider-img" />
         </div>
 
         <h1 className="title">MovieHive</h1>
