@@ -19,11 +19,12 @@ function ImageSlider() {
 
     return <header>
 
-        <div className="image-div">
-            <img src={`/pics/image-slider/${sliderImage}`} alt="slider-img" />
-        </div>
+        <img className="slider-img" src={`/pics/image-slider/${sliderImage}`} alt="slider-img" />
 
-        <h1 className="title">MovieHive</h1>
+        <div className="logo-div">
+            <img className="logo-img" src="/pics/logo3.png" alt="logo" />
+            <h1 className="logo-title">MovieHive</h1>
+        </div>
 
         <div className="description-div">
             <h1>Unlimited movies, series and more</h1>

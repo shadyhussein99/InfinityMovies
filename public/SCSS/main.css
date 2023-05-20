@@ -19,4 +19,39 @@ aside a {
   text-decoration: none;
   margin-top: 45%;
   text-align: center;
+}
+
+header {
+  position: relative;
+  width: 82%;
+  margin-left: auto;
+}
+header .slider-img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  filter: brightness(45%);
+}
+header .logo-div {
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 5%;
+  margin-top: 2%;
+}
+header .logo-div .logo-title {
+  color: white;
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+header .logo-div .logo-img {
+  width: 90px;
+  height: 70px;
+}
+header .description-div {
+  color: white;
+  position: absolute;
+  top: 60%;
+  left: 5%;
 }/*# sourceMappingURL=main.css.map */
