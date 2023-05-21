@@ -322,6 +322,13 @@ main .details-section {
   margin: 20px auto 70px;
   width: 930px;
 }
+main .details-section p {
+  font-weight: 600;
+}
+main .details-section p span {
+  color: #b02e2f;
+  margin-left: 15px;
+}
 main .details-section .ratingValue-span {
   background-color: #b02e2f;
   border-radius: 5px;
@@ -332,4 +339,23 @@ main .details-section .ratingNumber-span {
   color: #595260;
   font-weight: 600;
   margin-left: 10px;
+}
+main .details-section h1.title {
+  font-size: 2.3rem;
+}
+main .details-section span.genre {
+  border: 2px solid #b02e2f;
+  border-radius: 25px;
+  color: #b02e2f;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 8px;
+}
+main .details-section .plot {
+  margin-top: 50px;
+}
+
+h1.unmatching-movies {
+  margin-left: 5%;
+  margin-top: 3%;
 }/*# sourceMappingURL=main.css.map */

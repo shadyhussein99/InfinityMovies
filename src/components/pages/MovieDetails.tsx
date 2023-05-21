@@ -27,20 +27,17 @@ function MovieDetails() {
                 <span className="ratingValue-span">IMDB {movie?.imdbRating}/10</span>
                 <span className="ratingNumber-span">({movie?.imdbVotes} reviews)</span>
 
-                <h1>{movie?.Title}</h1>
-
-                <div>
-                    <span>{movie?.Genre}</span>
-                    <span>{movie?.Runtime}</span>
-                </div>
-
-                <p>{movie?.Plot}</p>
+                <h1 className="title">{movie?.Title}</h1>
+                <span className="genre">{movie?.Genre}</span>
+                <p className="plot">{movie?.Plot}</p>
                 <hr />
                 <p>Main Actors <span>{movie?.Actors}</span></p>
                 <hr />
                 <p>Director <span>{movie?.Director}</span></p>
                 <hr />
                 <p>Writer <span>{movie?.Writer}</span></p>
+                <hr />
+                <p>Runtime <span>{movie?.Runtime}</span></p>
                 <hr />
                 <p>Release Date <span>{movie?.Released}</span></p>
                 <hr />
@@ -51,7 +48,7 @@ function MovieDetails() {
                 <p>Awards <span>{movie?.Awards}</span></p>
             </section>
         </main> :
-        <h1>No matching Movie or Series!</h1>
+        <h1 className="unmatching-movies">No matching Movie or Series!</h1>
     );
 }
 
