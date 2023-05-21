@@ -33,3 +33,23 @@ header {
         }
     }
 }
+
+
+@media (max-width: 991px) {
+    header {
+        width: 100%;
+
+        .logo-div {
+            
+            display: block;
+            position: absolute;
+            top: 30px;
+            left: 8%;
+
+            .logo-img {
+                width: 160px;
+                height: 80px;
+            }
+        }
+    }
+}
