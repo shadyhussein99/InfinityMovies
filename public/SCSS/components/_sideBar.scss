@@ -39,5 +39,23 @@ aside {
 
 
 @media (max-width: 991px) {
-    
+    aside {
+        position: initial;
+        width: initial;
+        min-height: initial;
+
+
+        .logo-div {           
+
+            .logo {
+                margin-top: 20px;
+                margin-bottom: 40px;
+            }
+        }
+
+        a {
+            margin-top: 0;
+            padding-bottom: 20px;
+        }
+    }
 }

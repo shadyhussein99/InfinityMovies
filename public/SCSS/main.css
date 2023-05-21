@@ -55,6 +55,21 @@ aside a:hover {
   transform: translate(3px, -3px);
 }
 
+@media (max-width: 991px) {
+  aside {
+    position: initial;
+    width: initial;
+    min-height: initial;
+  }
+  aside .logo-div .logo {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  aside a {
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
+}
 header {
   position: relative;
   width: 82%;
