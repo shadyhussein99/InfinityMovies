@@ -189,30 +189,40 @@ header .description-div p {
 
 .newest-movies-section {
   width: 75%;
-  margin-left: auto;
-  margin-right: 50px;
-  margin-top: 20px;
+  margin: 20px 50px 0 auto;
 }
 
+@media (max-width: 991px) {
+  .newest-movies-section {
+    width: 90%;
+    margin: 80px auto 0;
+  }
+}
 .popular-movies-section {
   width: 75%;
-  margin-left: auto;
-  margin-right: 50px;
-  margin-top: 120px;
+  margin: 120px 50px 0 auto;
 }
 
+@media (max-width: 991px) {
+  .popular-movies-section {
+    width: 90%;
+    margin: 80px auto 0;
+  }
+}
 .maxEarnings-movies-section {
   width: 75%;
-  margin-left: auto;
-  margin-right: 50px;
-  margin-top: 120px;
+  margin: 120px 50px 0 auto;
 }
 
+@media (max-width: 991px) {
+  .maxEarnings-movies-section {
+    width: 90%;
+    margin: 80px auto 0;
+  }
+}
 .children-movies-section {
   width: 75%;
-  margin-left: auto;
-  margin-right: 50px;
-  margin-top: 120px;
+  margin: 120px 50px 0 auto;
   cursor: pointer;
 }
 .children-movies-section .card-section {
@@ -249,4 +259,16 @@ header .description-div p {
 }
 .children-movies-section button:hover {
   background-color: #C13B3B;
+}
+
+@media (max-width: 991px) {
+  .children-movies-section {
+    width: 90%;
+    margin: 80px auto 0;
+  }
+}
+@media (max-width: 799px) {
+  .children-movies-section .card-section {
+    width: 31.3%;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -13,7 +13,6 @@ function NewestMovies() {
     }, [])
 
     return <section className="newest-movies-section" id="newest-movies">
-
         <div>
             <h2>What's New</h2>
 

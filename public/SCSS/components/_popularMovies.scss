@@ -2,7 +2,13 @@
 
 .popular-movies-section {
     width: $carousel-large-screens-width;
-    margin-left: $carousel-margin-left;
-    margin-right: $carousel-margin-right;
-    margin-top: $carousel-margin-top;
+    margin: $carousel-margin-top $carousel-margin-right 0 $carousel-margin-left;
+}
+
+
+@media (max-width: 991px) {
+    .popular-movies-section {
+        width: $carousel-medium-screens-width;
+        margin: 80px auto 0;
+    }
 }

@@ -13,10 +13,18 @@ function MovieCard(props: any) {
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={10}
-                slidesPerView={4}
+                breakpoints={{
+                    0: {
+                        slidesPerView: 3,
+                    },
+                    800: {
+                        slidesPerView: 4,
+                    }
+                }}
                 navigation
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
+
             >
                 {props.movies.map((value: any) => {
                     return (
@@ -26,8 +34,9 @@ function MovieCard(props: any) {
                         </SwiperSlide>)
                 })}
             </Swiper> :
-            <p>Loading...</p>}
-    </section>
+            <p>Loading...</p>
+        }
+    </section >
 }
 
 export default MovieCard
