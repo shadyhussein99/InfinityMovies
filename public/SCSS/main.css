@@ -132,4 +132,10 @@ header .description-div p {
 }
 .search-section .button-div button:hover {
   background-color: #C13B3B;
+}
+
+.newest-movies-section {
+  width: 75%;
+  margin-left: auto;
+  margin-right: 50px;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,7 @@
+@use "../variables" as *;
+
+.newest-movies-section {
+    width: $carousel-large-screens-width;
+    margin-left: auto;
+    margin-right: 50px;
+}
