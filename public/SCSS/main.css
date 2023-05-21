@@ -358,4 +358,10 @@ main .details-section .plot {
 h1.unmatching-movies {
   margin-left: 5%;
   margin-top: 3%;
+}
+
+@media (max-width: 991px) {
+  main .details-section {
+    width: 90%;
+  }
 }/*# sourceMappingURL=main.css.map */

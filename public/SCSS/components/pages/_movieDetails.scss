@@ -79,5 +79,7 @@ h1.unmatching-movies {
 
 
 @media (max-width: 991px) {
-
+main .details-section {
+    width: $movieDetails-medium-screen-width;
+}
 }
