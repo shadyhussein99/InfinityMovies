@@ -115,6 +115,18 @@ header .description-div p {
     height: 80px;
   }
 }
+@media (max-width: 799px) {
+  header .description-div {
+    width: 70%;
+    top: 35%;
+  }
+  header .description-div h1 {
+    font-size: 2.3rem;
+  }
+  header .description-div p {
+    font-size: 1.2rem;
+  }
+}
 .search-section {
   width: 82%;
   margin-left: auto;
@@ -176,6 +188,14 @@ header .description-div p {
     margin: 20px auto 0;
   }
 }
+@media (max-width: 600px) {
+  .search-section .search-container .search-div label {
+    font-size: 1.1rem;
+  }
+  .search-section .search-container .search-div input {
+    width: 130px;
+  }
+}
 .card-slide {
   cursor: pointer;
 }
@@ -227,8 +247,8 @@ header .description-div p {
 }
 .children-movies-section .card-section {
   display: inline-block;
-  width: 23%;
-  margin-right: 2%;
+  width: 22%;
+  margin-right: 3%;
   margin-bottom: 30px;
 }
 .children-movies-section .card-section img {
@@ -269,6 +289,11 @@ header .description-div p {
 }
 @media (max-width: 799px) {
   .children-movies-section .card-section {
-    width: 31.3%;
+    width: 30.3%;
+  }
+}
+@media (max-width: 599px) {
+  .children-movies-section .card-section {
+    width: 47%;
   }
 }/*# sourceMappingURL=main.css.map */

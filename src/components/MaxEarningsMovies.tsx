@@ -15,9 +15,11 @@ function MaxEarningsMovies() {
     return <section className="maxEarnings-movies-section" id="max-earnings-movies">
         <h2>Max Earnings</h2>
 
-        <MovieCard
-            movies={maxEarningsMovies}
-        />
+        {maxEarningsMovies ?
+            <MovieCard
+                movies={maxEarningsMovies}
+            /> :
+            <p>Loading..</p>}
     </section>
 }
 

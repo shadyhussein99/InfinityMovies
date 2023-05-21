@@ -15,9 +15,11 @@ function PopularMovies() {
     return <section className="popular-movies-section" id="popular-movies">
         <h2>Most Popular</h2>
 
-        <MovieCard
-            movies={popularMovies}
-        />
+        {popularMovies ?
+            <MovieCard
+                movies={popularMovies}
+            /> :
+            <p>Loading...</p>}
     </section>
 }
 

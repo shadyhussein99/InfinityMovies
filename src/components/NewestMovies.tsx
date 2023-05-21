@@ -16,9 +16,11 @@ function NewestMovies() {
         <div>
             <h2>What's New</h2>
 
-            <MovieCard
-                movies={newestMovies}
-            />
+            {newestMovies ?
+                <MovieCard
+                    movies={newestMovies}
+                /> :
+                <p>Loading...</p>}
         </div>
     </section>
 }
