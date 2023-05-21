@@ -3,7 +3,7 @@
 function SideBar() {
     return <aside>
         <div className="logo-div">
-            <img className="logo" src="/pics/logo2.png" alt="logo" />
+            <img className="logo" src="/pics/logo-white.png" alt="logo" />
         </div>
         <a href="#newest-movies">Newest Movies</a>
         <a href="#popular-movies">Popular Movies</a>

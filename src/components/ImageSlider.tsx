@@ -22,7 +22,7 @@ function ImageSlider() {
         <img className="slider-img" src={`/pics/image-slider/${sliderImage}`} alt="slider-img" />
 
         <div className="logo-div">
-            <img className="logo-img" src="/pics/logo.png" alt="logo" />
+            <img className="logo-img" src="/pics/logo-primary.png" alt="logo" />
         </div>
 
         <div className="description-div">
