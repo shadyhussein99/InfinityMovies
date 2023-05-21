@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { searchMovie } from "../redux/selectSlice";
 
 function ChildrenMovies() {
+
+    const dispatch = useDispatch()
 
     const [childrenMovies, setChildrenMovies] = useState<string[]>([])          // State that holds the response
     const [numberOfMovies, setNumberOfMovies] = useState<number>(8)             // Number of children movies displayed
@@ -23,18 +27,22 @@ function ChildrenMovies() {
     return <section className="children-movies-section" id="children-movies">
         <h2>Children Movies</h2>
 
-        {displayedMovies.map((value: any) => {
-            return <section className="card-section" key={value?.id}>
+        {displayedMovies ?
+            displayedMovies.map((value: any) => {
+                return <section className="card-section" key={value?.id} onClick={() => dispatch(searchMovie({ name: value.name || value.title }))}>
 
-                <img src={`https://image.tmdb.org/t/p/w300/${value?.poster_path}`} alt="movie-img" />
+                    <img src={`https://image.tmdb.org/t/p/w300/${value?.poster_path}`} alt="movie-img" />
 
-                <div className="title-div">
-                    <h3>{value?.title || value?.name}</h3>
-                </div>
-            </section>
-        })}
+                    <div className="title-div">
+                        <h3>{value?.title || value?.name}</h3>
+                    </div>
+                </section>
+            }) :
+            <p>Loading...</p>}
 
-        {loadButton && <button onClick={() => { setNumberOfMovies(numberOfMovies + 4) }}>Load More</button>}
+        <div className="button-div">
+            {loadButton && <button onClick={() => { setNumberOfMovies(numberOfMovies + 4) }}>Load More</button>}
+        </div>
 
     </section>
 }

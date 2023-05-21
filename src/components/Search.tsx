@@ -55,8 +55,8 @@ function Search() {
             </div>
         </div>
 
-<div className="button-div">
-        <button onClick={handleClick}>SEARCH</button>
+        <div className="button-div">
+            <button onClick={handleClick}>SEARCH</button>
         </div>
 
     </section>

@@ -139,6 +139,9 @@ header .description-div p {
   background-color: #C13B3B;
 }
 
+.card-slide {
+  cursor: pointer;
+}
 .card-slide img {
   width: 90%;
   height: 100%;
@@ -173,11 +176,40 @@ header .description-div p {
   margin-left: auto;
   margin-right: 50px;
   margin-top: 120px;
+  cursor: pointer;
 }
 .children-movies-section .card-section {
   display: inline-block;
-  width: 20%;
+  width: 23%;
+  margin-right: 2%;
+  margin-bottom: 30px;
+}
+.children-movies-section .card-section img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .children-movies-section .card-section .title-div {
   display: flex;
+}
+.children-movies-section .button-div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.children-movies-section .button-div button {
+  background-color: #b02e2f;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 15px auto;
+  padding: 15px 55px;
+  transition: 200ms;
+}
+.children-movies-section button:hover {
+  background-color: #C13B3B;
 }/*# sourceMappingURL=main.css.map */
