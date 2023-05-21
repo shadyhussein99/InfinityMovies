@@ -296,4 +296,40 @@ header .description-div p {
   .children-movies-section .card-section {
     width: 47%;
   }
+}
+main .poster {
+  height: 500px;
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+main .back-arrow {
+  background-color: #b02e2f;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: x-large;
+  position: absolute;
+  top: 3%;
+  left: 2%;
+  padding: 15px;
+  transition: 200ms;
+}
+main .back-arrow:hover {
+  background-color: #C13B3B;
+}
+main .details-section {
+  margin: 20px auto 70px;
+  width: 930px;
+}
+main .details-section .ratingValue-span {
+  background-color: #b02e2f;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+}
+main .details-section .ratingNumber-span {
+  color: #595260;
+  font-weight: 600;
+  margin-left: 10px;
 }/*# sourceMappingURL=main.css.map */
