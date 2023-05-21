@@ -9,6 +9,11 @@ h3 {
   font-family: "Open Sans", sans-serif;
 }
 
+h2 {
+  color: #b02e2f;
+  font-size: 2rem;
+}
+
 p,
 a,
 label {
@@ -82,7 +87,7 @@ header .description-div p {
 .search-section {
   width: 82%;
   margin-left: auto;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .search-section .search-container {
   display: flex;
@@ -134,8 +139,31 @@ header .description-div p {
   background-color: #C13B3B;
 }
 
+.card-slide img {
+  width: 90%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  margin: auto;
+}
+
 .newest-movies-section {
   width: 75%;
   margin-left: auto;
   margin-right: 50px;
+  margin-top: 20px;
+}
+
+.popular-movies-section {
+  width: 75%;
+  margin-left: auto;
+  margin-right: 50px;
+  margin-top: 120px;
+}
+
+.maxEarnings-movies-section {
+  width: 75%;
+  margin-left: auto;
+  margin-right: 50px;
+  margin-top: 120px;
 }/*# sourceMappingURL=main.css.map */

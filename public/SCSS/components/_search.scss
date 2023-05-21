@@ -1,9 +1,9 @@
 @use "../variables" as *;
 
 .search-section {
-    width: $large-screens-width;
+    width: $slider-large-screens-width;
     margin-left: auto;
-    margin-top: 40px;
+    margin-top: 20px;
 
     .search-container {
         display: flex;

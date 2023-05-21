@@ -1,8 +1,8 @@
 @use "../variables" as *;
 
-.newest-movies-section {
+.popular-movies-section {
     width: $carousel-large-screens-width;
     margin-left: $carousel-margin-left;
     margin-right: $carousel-margin-right;
-    margin-top: 20px;
+    margin-top: $carousel-margin-top;
 }
