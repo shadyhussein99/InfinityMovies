@@ -60,14 +60,15 @@ aside a:hover {
     position: initial;
     width: initial;
     min-height: initial;
+    margin-top: 50px;
+    padding-top: 15px;
   }
-  aside .logo-div .logo {
-    margin-top: 20px;
-    margin-bottom: 40px;
+  aside .logo-div {
+    display: none;
   }
   aside a {
     margin-top: 0;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
 }
 header {
@@ -169,6 +170,12 @@ header .description-div p {
   background-color: #C13B3B;
 }
 
+@media (max-width: 991px) {
+  .search-section {
+    width: 100;
+    margin: 20px auto 0;
+  }
+}
 .card-slide {
   cursor: pointer;
 }

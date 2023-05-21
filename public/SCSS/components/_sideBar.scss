@@ -43,16 +43,17 @@ aside {
         position: initial;
         width: initial;
         min-height: initial;
+        margin-top: 50px;
+        padding-top: 15px;
 
-        .logo-div .logo {
-            margin-top: 20px;
-            margin-bottom: 40px;
+        .logo-div {
+            display: none;
         }
 
 
         a {
             margin-top: 0;
-            padding-bottom: 20px;
+            padding-bottom: 15px;
         }
     }
 }
