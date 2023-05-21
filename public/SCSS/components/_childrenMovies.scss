@@ -1,0 +1,18 @@
+@use "../variables" as *;
+
+.children-movies-section {
+    width: $carousel-large-screens-width;
+    margin-left: $carousel-margin-left;
+    margin-right: $carousel-margin-right;
+    margin-top: $carousel-margin-top;
+
+    .card-section {
+        display: inline-block;
+        width: 20%;
+
+
+        .title-div {
+            display: flex;
+        }
+    }
+}

@@ -20,13 +20,17 @@ function ChildrenMovies() {
     }, [displayedMovies, childrenMovies])
 
 
-    return <section id="children-movies">
+    return <section className="children-movies-section" id="children-movies">
         <h2>Children Movies</h2>
 
         {displayedMovies.map((value: any) => {
-            return <section key={value?.id}>
+            return <section className="card-section" key={value?.id}>
+
                 <img src={`https://image.tmdb.org/t/p/w300/${value?.poster_path}`} alt="movie-img" />
-                <h3>{value?.title || value?.name}</h3>
+
+                <div className="title-div">
+                    <h3>{value?.title || value?.name}</h3>
+                </div>
             </section>
         })}
 
