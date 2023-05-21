@@ -1,5 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700;800&display=swap");
 body {
   margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Open Sans", sans-serif;
+}
+
+p,
+a {
+  font-family: "Montserrat", sans-serif;
+  line-height: 2rem;
 }
 
 aside {
@@ -11,14 +24,29 @@ aside {
   min-height: 100vh;
   z-index: 2;
 }
+aside .logo-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+aside .logo-div .logo {
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 aside a {
   display: block;
   color: white;
   font-size: 1.5rem;
   font-weight: 600;
   text-decoration: none;
-  margin-top: 45%;
+  margin-top: 32%;
   text-align: center;
+  transition: 300ms;
+}
+aside a:hover {
+  color: #DDE6ED;
+  transform: translate(3px, -3px);
 }
 
 header {
@@ -34,24 +62,18 @@ header .slider-img {
   filter: brightness(45%);
 }
 header .logo-div {
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 5%;
-  margin-top: 2%;
-}
-header .logo-div .logo-title {
-  color: white;
-  font-size: 2.5rem;
-  margin-top: 0;
-}
-header .logo-div .logo-img {
-  width: 90px;
-  height: 70px;
+  display: none;
 }
 header .description-div {
   color: white;
   position: absolute;
-  top: 60%;
-  left: 5%;
+  top: 25%;
+  left: 8%;
+  width: 50%;
+}
+header .description-div h1 {
+  font-size: 2.9rem;
+}
+header .description-div p {
+  font-size: 1.5rem;
 }/*# sourceMappingURL=main.css.map */

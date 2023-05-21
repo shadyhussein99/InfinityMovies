@@ -13,28 +13,23 @@ header {
     }
 
     .logo-div {
-        align-items: center;
-        position: absolute;
-        top: 0;
-        left: 5%;
-        margin-top: 2%;
-
-        .logo-title {
-            color: white;
-            font-size: 2.5rem;
-            margin-top: 0;
-        }
-
-        .logo-img {
-            width: 90px;
-            height: 70px;
-        }
+        display: none;
     }
+
 
     .description-div {
         color: white;
         position: absolute;
-        top: 60%;
-        left: 5%;
+        top: 25%;
+        left: 8%;
+        width: 50%;
+
+        h1 {
+            font-size: 2.9rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
     }
 }

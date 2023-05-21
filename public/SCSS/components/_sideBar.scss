@@ -1,21 +1,38 @@
 @use "../variables" as *;
 
 aside {
-background-color: $primary;
-position: fixed;
-top: 0;
-left: 0;
-width: 18%;
-min-height: 100vh;
-z-index: 2;
+    background-color: $primary;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18%;
+    min-height: 100vh;
+    z-index: 2;
 
-a {
-    display: block;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-decoration: none;
-    margin-top: 45%;
-    text-align: center;
-}
+    .logo-div {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+
+        .logo {
+            height: 100px;
+            object-fit: contain;
+        }
+    }
+
+    a {
+        display: block;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        margin-top: 32%;
+        text-align: center;
+        transition: 300ms;
+    }
+
+    a:hover {
+        color: #DDE6ED;
+        transform: translate(3px, -3px);
+    }
 }

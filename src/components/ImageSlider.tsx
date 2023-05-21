@@ -22,13 +22,12 @@ function ImageSlider() {
         <img className="slider-img" src={`/pics/image-slider/${sliderImage}`} alt="slider-img" />
 
         <div className="logo-div">
-            <img className="logo-img" src="/pics/logo3.png" alt="logo" />
-            <h1 className="logo-title">MovieHive</h1>
+            <img className="logo-img" src="/pics/logo.png" alt="logo" />
         </div>
 
         <div className="description-div">
             <h1>Unlimited movies, series and more</h1>
-            <p>Find the latest news and information about movies and series on MovieHovie</p>
+            <p>Find the latest news and information about movies and series on InfinityMovies</p>
         </div>
     </header>
 }
