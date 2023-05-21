@@ -43,17 +43,21 @@ function Search() {
 
     return <section className="search-section">
 
-        <div className="search-div">
-            <label>Title</label>
-            <input type="text" name="name" value={searchingMovie.name} placeholder="Search" onChange={handleChange} />
+        <div className="search-container">
+            <div className="search-div">
+                <label>Title</label>
+                <input type="text" name="name" value={searchingMovie.name} placeholder="Search" onChange={handleChange} />
+            </div>
+
+            <div className="search-div">
+                <label>Year (optional)</label>
+                <input type="text" name="year" value={searchingMovie.year} onChange={handleChange} />
+            </div>
         </div>
 
-        <div className="search-div">
-            <label>Year (optional)</label>
-            <input type="text" name="year" value={searchingMovie.year} onChange={handleChange} />
-        </div>
-
+<div className="button-div">
         <button onClick={handleClick}>SEARCH</button>
+        </div>
 
     </section>
 }
