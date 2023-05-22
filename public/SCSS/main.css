@@ -364,4 +364,21 @@ h1.unmatching-movies {
   main .details-section {
     width: 90%;
   }
+}
+div .backToTop-button {
+  background-color: #b02e2f;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 1.8rem;
+  position: fixed;
+  bottom: 40px;
+  right: 7%;
+  padding: 10px 20px;
+  z-index: 1;
+}
+
+div .backToTop-button:hover {
+  background-color: #C13B3B;
 }/*# sourceMappingURL=main.css.map */

@@ -5,11 +5,14 @@ function BackToTopButton() {
     const [backToTop, setBackToTop] = useState(false)
 
     useEffect(() => {
-        if (window.scrollY > 200) {
-            setBackToTop(true)
-        } else {
-            setBackToTop(false)
-        }
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                setBackToTop(true)
+            } else {
+                setBackToTop(false)
+            }
+        })
+
     }, [backToTop])
 
     const scrollUp = () => {
@@ -20,7 +23,7 @@ function BackToTopButton() {
     }
 
     return <div>
-        {backToTop && <button onClick={scrollUp}>^</button>}
+        {backToTop && <button className="backToTop-button" onClick={scrollUp}>^</button>}
     </div>
 }
 
