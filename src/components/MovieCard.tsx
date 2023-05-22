@@ -26,7 +26,6 @@ function MovieCard(props: any) {
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-
         >
             {props.movies.map((value: any) => {
                 return (
