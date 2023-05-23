@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { searchMovie } from '../redux/selectSlice';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y } from '../../node_modules/swiper';  // To declare the types of these properties
 import 'swiper/css/bundle';
 
 function MovieCard(props: any) {
