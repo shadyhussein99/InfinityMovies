@@ -1,31 +1,24 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+import ScrollToTopOnRouting from './components/ScrollToTopOnRouting.tsx';
 import MovieDetails from './components/pages/MovieDetails.tsx';
-import store from "./redux/store"
-import { Provider } from 'react-redux'
+import store from "./redux/store";
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "movieDetails",
-    element: <MovieDetails />
-
-  },
-]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <Router>
+        <ScrollToTopOnRouting />   {/* This is component used to scroll to top on changing the Route */}
+
+        <Routes>
+          <Route path='/' element={<App />} />
+          <Route path='movieDetails' element={<MovieDetails />} />
+        </Routes>
+      </Router>
     </Provider>
   </React.StrictMode>,
 )
