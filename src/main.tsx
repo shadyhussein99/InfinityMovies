@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import ScrollToTopOnRouting from './components/ScrollToTopOnRouting.tsx';
 import MovieDetails from './components/pages/MovieDetails.tsx';
+import ErrorPage from './components/pages/ErrorPage.tsx';
 import store from "./redux/store";
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Routes>
           <Route path='/' element={<App />} />
           <Route path='movieDetails' element={<MovieDetails />} />
+          <Route path='*' element={<ErrorPage />} />
         </Routes>
       </Router>
     </Provider>

@@ -381,4 +381,9 @@ div .backToTop-button {
 
 div .backToTop-button:hover {
   background-color: #C13B3B;
+}
+
+h1.error-message {
+  margin-left: 5%;
+  margin-top: 3%;
 }/*# sourceMappingURL=main.css.map */
