@@ -8,7 +8,7 @@ function ChildrenMovies() {
 
     const [childrenMovies, setChildrenMovies] = useState<string[]>([])          // State that holds the response
     const [numberOfMovies, setNumberOfMovies] = useState<number>(8)             // Number of children movies displayed
-    const displayedMovies: string[] = childrenMovies.slice(0, numberOfMovies)   // Array of movies displayed
+    const displayedMovies: string[] = childrenMovies?.slice(0, numberOfMovies)   // Array of movies displayed
 
     const [loadButton, setLoadButton] = useState<boolean>(true)    // To hide the Load More button if there is no more data
 
@@ -20,7 +20,7 @@ function ChildrenMovies() {
     }, [])
 
     useEffect(() => {        // Handles the display of the Load More button
-        displayedMovies.length === childrenMovies.length ? setLoadButton(false) : setLoadButton(true)
+        displayedMovies?.length === childrenMovies?.length ? setLoadButton(false) : setLoadButton(true)
     }, [displayedMovies, childrenMovies])
 
 
